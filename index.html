@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBERFORGE — Learn the Threat • Build the Defense | ACM-W NMIMS Indore</title>
+  
+  <meta name="description" content="CyberForge is a two-day cybersecurity learning and hands-on experience organized by ACM-W Student Chapter, SVKM's NMIMS Indore. Learn the threat, build the defense, and engage in real-world cybersecurity practice.">
+  <meta name="keywords" content="CyberForge, Cybersecurity, ACM-W, NMIMS Indore, Threat Modeling, Defensive Security, Workshop, Live Demos">
+  <meta name="author" content="ACM-W Student Chapter, NMIMS Indore">
+  <meta name="theme-color" content="#020d1a">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CYBERFORGE — Learn the Threat • Build the Defense">
+  <meta property="og:description" content="A Two-Day Cybersecurity Learning & Hands-on Experience. Organized by ACM-W Student Chapter, NMIMS Indore.">
+  <meta property="og:image" content="assets/images/acmw.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/acmw.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       1. FIXED FLOATING NAVBAR
+  ═══════════════════════════════════════════════════════════════ -->
+  <header id="siteHeader" class="site-header">
+    <div class="container header-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo-btn" aria-label="CyberForge Home">
+        <div class="brand-logos">
+          <img src="assets/images/nmims.png" alt="NMIMS" class="brand-logo-img">
+          <div class="brand-divider"></div>
+          <img src="assets/images/acmw.png" alt="ACM-W" class="brand-logo-img">
+          <img src="assets/images/acm.png" alt="ACM" class="brand-logo-img">
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-text-main">CYBER<span class="text-cyan">FORGE</span></span>
+          <span class="brand-text-sub">ACM-W NMIMS INDORE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Pills -->
+      <nav class="nav-desktop-pill" aria-label="Main Navigation">
+        <a href="#home" class="nav-pill-link active" data-target="home">HOME</a>
+        <a href="#overview" class="nav-pill-link" data-target="overview">OVERVIEW</a>
+        <a href="#objectives" class="nav-pill-link" data-target="objectives">OBJECTIVES</a>
+        <a href="#schedule" class="nav-pill-link" data-target="schedule">SCHEDULE</a>
+        <a href="#highlights" class="nav-pill-link" data-target="highlights">HIGHLIGHTS</a>
+        <a href="#venue" class="nav-pill-link" data-target="venue">VENUE</a>
+        <a href="#faq" class="nav-pill-link" data-target="faq">FAQ</a>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="#schedule" class="header-cta-btn">VIEW SCHEDULE</a>
+        <button type="button" id="mobileToggle" class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobileNavOverlay" class="mobile-nav-overlay" aria-hidden="true">
+    <button type="button" id="mobileNavClose" class="mobile-nav-close" aria-label="Close Menu">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <a href="#home" class="mobile-nav-link">HOME</a>
+    <a href="#overview" class="mobile-nav-link">OVERVIEW</a>
+    <a href="#objectives" class="mobile-nav-link">OBJECTIVES</a>
+    <a href="#schedule" class="mobile-nav-link">SCHEDULE</a>
+    <a href="#highlights" class="mobile-nav-link">HIGHLIGHTS</a>
+    <a href="#venue" class="mobile-nav-link">VENUE</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+  </div>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════════════════════
+         2. HERO BANNER SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="home" class="hero-section">
+      <!-- Background Cyber Particle Canvas -->
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Background Layers -->
+      <div class="hero-grid-bg"></div>
+      <div class="hero-vignette"></div>
+      <div class="ambient-blob blob-1"></div>
+      <div class="ambient-blob blob-2"></div>
+
+      <div class="container hero-content">
+        
+        <!-- Chapter Badge -->
+        <div class="hero-badge-wrap">
+          <span class="pulse-dot"></span>
+          <span class="hero-badge-text">Organized by ACM-W Student Chapter, NMIMS Indore</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-title">
+          CYBER<span class="text-shimmer">FORGE</span>
+        </h1>
+
+        <!-- Thematic Tagline -->
+        <div class="hero-tagline">
+          <span class="tagline-threat">LEARN THE THREAT</span>
+          <span class="tagline-bullet">•</span>
+          <span class="tagline-defense">BUILD THE DEFENSE</span>
+        </div>
+
+        <!-- Subtitle & Detailed Description -->
+        <p class="hero-desc">
+          A two-day cybersecurity learning and hands-on experience designed to move students from understanding fundamental cybersecurity concepts to applying them in a practical setting. Combining expert interaction, in-depth workshop modules, live demonstrations, and guided participant activities.
+        </p>
+
+        <!-- Quick Event Metadata Pills -->
+        <div class="hero-meta-row">
+          <div class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>NMIMS Indore (Auditorium &amp; Multipurpose Hall)</span>
+          </div>
+          <div class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Two Days (09:00 AM – 04:00 PM Daily)</span>
+          </div>
+          <div class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Expert Keynote &amp; Practical Challenge</span>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions">
+          <a href="#schedule" class="btn-primary">EXPLORE 2-DAY SCHEDULE</a>
+          <a href="#overview" class="btn-secondary">EVENT OVERVIEW</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         3. MARQUEE TICKER (ACM-26 SIGNATURE)
+    ═══════════════════════════════════════════════════════════════ -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span class="marquee-text">LEARN THE THREAT • BUILD THE DEFENSE</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">CYBERFORGE 2026</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">ACM-W STUDENT CHAPTER NMIMS INDORE</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">2-DAY IMMERSIVE PROGRESSION</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">EXPERT INTERACTION &amp; WORKSHOPS</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">LIVE CYBERSECURITY DEMONSTRATIONS</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">HANDS-ON DEFENSIVE CHALLENGE</span>
+          <span class="marquee-bullet"></span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">LEARN THE THREAT • BUILD THE DEFENSE</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">CYBERFORGE 2026</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">ACM-W STUDENT CHAPTER NMIMS INDORE</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">2-DAY IMMERSIVE PROGRESSION</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">EXPERT INTERACTION &amp; WORKSHOPS</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">LIVE CYBERSECURITY DEMONSTRATIONS</span>
+          <span class="marquee-bullet"></span>
+          <span class="marquee-text">HANDS-ON DEFENSIVE CHALLENGE</span>
+          <span class="marquee-bullet"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         4. METRICS & OVERVIEW SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number">02</div>
+            <div class="metric-title">Event Days</div>
+            <div class="metric-sub">Explore &amp; Defend Model</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">01</div>
+            <div class="metric-title">Industry Expert</div>
+            <div class="metric-sub">Keynote &amp; Direct Mentoring</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">04</div>
+            <div class="metric-title">Guided Sessions</div>
+            <div class="metric-sub">Workshops &amp; Live Demos</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">100%</div>
+            <div class="metric-title">Hands-on Focus</div>
+            <div class="metric-sub">Classroom to Application</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Structure Section -->
+    <section id="overview" class="overview-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">1. Event Overview &amp; Structure</span>
+          </div>
+          <h2 class="section-title">A TWO-DAY PROGRESSION MODEL</h2>
+          <p class="section-subtitle">
+            Day 1 focuses on learning and direct interaction with the invited cybersecurity expert, while Day 2 empowers participants to apply the concepts through practical tasks and demonstrate their solutions.
+          </p>
+        </div>
+
+        <div class="overview-cards-grid">
+          
+          <!-- Pillar Day 1 -->
+          <div class="overview-pillar-card pillar-day1">
+            <div class="pillar-tag">DAY 1 — EXPLORE &amp; LEARN</div>
+            <h3 class="pillar-heading">LEARN THE THREAT</h3>
+            <p class="pillar-text">
+              Provides deep expert insights into real-world cybersecurity, understanding adversary tradecraft, threat identification, and defensive practices through direct industry interaction.
+            </p>
+            <ul class="pillar-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Inauguration &amp; Welcome:</strong> Chapter opening and expert introduction.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Expert Interaction Session:</strong> Industry insights, real-world experiences, and discussion.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Core Cybersecurity Workshop:</strong> Threat analysis, security architectures, and defense.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Live Cybersecurity Demonstration:</strong> Expert-led demonstration connecting workshop concepts with practical scenarios.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Interactive Q&amp;A:</strong> Technical questions, career discussions, and industry interaction.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar Day 2 -->
+          <div class="overview-pillar-card pillar-day2">
+            <div class="pillar-tag">DAY 2 — BUILD &amp; DEFEND</div>
+            <h3 class="pillar-heading">BUILD THE DEFENSE</h3>
+            <p class="pillar-text">
+              Application of Day 1 learning through practical problem-solving, guided mentoring, participant-led project demonstrations, expert feedback, and formal recognition.
+            </p>
+            <ul class="pillar-points">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Hands-on Activity Briefing:</strong> Task objectives, guidelines, and expected outputs.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Practical Cybersecurity Challenge:</strong> Hands-on application, analysis, and problem-solving.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Guided Sessions &amp; Mentorship:</strong> On-site technical support and guidance as students refine work.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Participant Demonstrations:</strong> Students showcase and defend their completed solutions.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Expert Feedback &amp; Certificates:</strong> Professional critique, key takeaways, and certificate distribution.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         5. OBJECTIVES SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="objectives" class="objectives-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">2. Core Objectives</span>
+          </div>
+          <h2 class="section-title">EVENT OBJECTIVES</h2>
+          <p class="section-subtitle">
+            Defined to provide an engaging bridge between academic theoretical concepts and real-world cybersecurity practices.
+          </p>
+        </div>
+
+        <div class="objectives-grid">
+          
+          <div class="obj-card">
+            <div class="obj-card-num">01</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="obj-card-title">Foundations &amp; Real Challenges</h3>
+            <p class="obj-card-desc">Introduce students to fundamental cybersecurity concepts and real-world security challenges faced across modern networks.</p>
+          </div>
+
+          <div class="obj-card">
+            <div class="obj-card-num">02</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="obj-card-title">Expert-Led Exposure</h3>
+            <p class="obj-card-desc">Provide practical exposure through expert-led demonstrations and guided activities illustrating attack and defense scenarios.</p>
+          </div>
+
+          <div class="obj-card">
+            <div class="obj-card-num">03</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+            </div>
+            <h3 class="obj-card-title">Problem Analysis &amp; Presentation</h3>
+            <p class="obj-card-desc">Encourage students to critically analyze cybersecurity problems and articulate structured, practical defense strategies.</p>
+          </div>
+
+          <div class="obj-card">
+            <div class="obj-card-num">04</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="obj-card-title">Defensive Thinking Mindset</h3>
+            <p class="obj-card-desc">Develop persistent awareness of secure coding practices, vulnerability discovery, threat identification, and defensive thinking.</p>
+          </div>
+
+          <div class="obj-card">
+            <div class="obj-card-num">05</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="obj-card-title">Direct Industry Interaction</h3>
+            <p class="obj-card-desc">Enable direct interaction between students and an external cybersecurity professional, fostering career insights and mentorship.</p>
+          </div>
+
+          <div class="obj-card">
+            <div class="obj-card-num">06</div>
+            <div class="obj-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            </div>
+            <h3 class="obj-card-title">ACM Technical Platform</h3>
+            <p class="obj-card-desc">Promote ACM as an active platform for hands-on, industry-oriented technical learning and student community engagement.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         6. PROPOSED EVENT SCHEDULE (TWO DAYS)
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="schedule" class="schedule-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">3. Proposed Event Schedule — Two Days</span>
+          </div>
+          <h2 class="section-title">THE TWO-DAY AGENDA</h2>
+          <p class="section-subtitle">
+            A clear progression from expert-led learning on Day 1 to practical application and participant demonstration on Day 2.
+          </p>
+        </div>
+
+        <!-- Schedule Tab Switcher -->
+        <div class="schedule-tabs-wrap">
+          <button type="button" class="sched-tab-btn active" data-target="schedDay1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>DAY 1 – EXPLORE &amp; LEARN</span>
+          </button>
+          <button type="button" class="sched-tab-btn day-2" data-target="schedDay2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>DAY 2 – BUILD &amp; DEFEND</span>
+          </button>
+        </div>
+
+        <!-- DAY 1 TIMELINE -->
+        <div id="schedDay1" class="sched-pane active">
+          <div class="timeline-list">
+            
+            <div class="timeline-entry">
+              <div class="entry-time">09:00 – 09:30 AM</div>
+              <div>
+                <h4 class="entry-title">Registration &amp; Welcome</h4>
+                <p class="entry-desc">Participant registration, check-in, and event orientation.</p>
+              </div>
+              <div><span class="entry-tag tag-break">WELCOME</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">09:30 – 10:00 AM</div>
+              <div>
+                <h4 class="entry-title">Inauguration &amp; Introduction</h4>
+                <p class="entry-desc">Event overview and formal introduction to the invited guest expert.</p>
+              </div>
+              <div><span class="entry-tag tag-ceremony">INAUGURATION</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">10:00 – 11:15 AM</div>
+              <div>
+                <h4 class="entry-title">Expert Interaction Session</h4>
+                <p class="entry-desc">Industry insights, real-world experiences, and cybersecurity landscape discussion.</p>
+              </div>
+              <div><span class="entry-tag tag-ceremony">INDUSTRY TALK</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">11:15 – 11:30 AM</div>
+              <div>
+                <h4 class="entry-title">Tea / Short Break</h4>
+                <p class="entry-desc">Brief intermission and networking refreshments.</p>
+              </div>
+              <div><span class="entry-tag tag-break">BREAK</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">11:30 AM – 01:00 PM</div>
+              <div>
+                <h4 class="entry-title">Core Cybersecurity Workshop</h4>
+                <p class="entry-desc">Cybersecurity concepts, threats, security practices, and defensive approaches.</p>
+              </div>
+              <div><span class="entry-tag tag-workshop">CORE WORKSHOP</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">01:00 – 02:00 PM</div>
+              <div>
+                <h4 class="entry-title">Lunch Break</h4>
+                <p class="entry-desc">Arranged lunch arrangements for participants and coordinators.</p>
+              </div>
+              <div><span class="entry-tag tag-break">LUNCH</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">02:00 – 02:45 PM</div>
+              <div>
+                <h4 class="entry-title">Live Cybersecurity Demonstration</h4>
+                <p class="entry-desc">Expert-led demonstration connecting workshop concepts with practical scenarios.</p>
+              </div>
+              <div><span class="entry-tag tag-demo">LIVE DEMO</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">02:45 – 03:30 PM</div>
+              <div>
+                <h4 class="entry-title">Interactive Q&amp;A &amp; Discussion</h4>
+                <p class="entry-desc">Technical questions, career discussion, and industry interaction.</p>
+              </div>
+              <div><span class="entry-tag tag-workshop">Q&amp;A DISCUSSION</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">03:30 – 04:00 PM</div>
+              <div>
+                <h4 class="entry-title">Day 1 Wrap-up</h4>
+                <p class="entry-desc">Key takeaways and briefing for Day 2 hands-on activity.</p>
+              </div>
+              <div><span class="entry-tag tag-break">DAY 1 WRAP-UP</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DAY 2 TIMELINE -->
+        <div id="schedDay2" class="sched-pane">
+          <div class="timeline-list">
+            
+            <div class="timeline-entry">
+              <div class="entry-time">09:00 – 09:30 AM</div>
+              <div>
+                <h4 class="entry-title">Registration / Re-orientation</h4>
+                <p class="entry-desc">Recap of Day 1 and preparation for the practical session.</p>
+              </div>
+              <div><span class="entry-tag tag-break">RE-ORIENTATION</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">09:30 – 10:00 AM</div>
+              <div>
+                <h4 class="entry-title">Hands-on Activity Briefing</h4>
+                <p class="entry-desc">Introduction to the task, objectives, guidelines, and expected output.</p>
+              </div>
+              <div><span class="entry-tag tag-lab">TASK BRIEFING</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">10:00 – 11:15 AM</div>
+              <div>
+                <h4 class="entry-title">Guided Hands-on Session – I</h4>
+                <p class="entry-desc">Participants begin working on the practical cybersecurity task.</p>
+              </div>
+              <div><span class="entry-tag tag-lab">HANDS-ON LAB I</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">11:15 – 11:30 AM</div>
+              <div>
+                <h4 class="entry-title">Tea / Short Break</h4>
+                <p class="entry-desc">Short intermission and informal discussion.</p>
+              </div>
+              <div><span class="entry-tag tag-break">BREAK</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">11:30 AM – 01:00 PM</div>
+              <div>
+                <h4 class="entry-title">Guided Hands-on Session – II</h4>
+                <p class="entry-desc">Practical application, analysis, and problem-solving with technical support.</p>
+              </div>
+              <div><span class="entry-tag tag-lab">HANDS-ON LAB II</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">01:00 – 02:00 PM</div>
+              <div>
+                <h4 class="entry-title">Lunch Break</h4>
+                <p class="entry-desc">Lunch arrangements for all participants.</p>
+              </div>
+              <div><span class="entry-tag tag-break">LUNCH</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">02:00 – 02:45 PM</div>
+              <div>
+                <h4 class="entry-title">Practical Work &amp; Mentorship</h4>
+                <p class="entry-desc">Participants refine their work and prepare their demonstrations with mentor guidance.</p>
+              </div>
+              <div><span class="entry-tag tag-lab">MENTORSHIP</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">02:45 – 03:30 PM</div>
+              <div>
+                <h4 class="entry-title">Participant Demonstrations</h4>
+                <p class="entry-desc">Participants present and demonstrate their completed cybersecurity work.</p>
+              </div>
+              <div><span class="entry-tag tag-demo">DEMONSTRATIONS</span></div>
+            </div>
+
+            <div class="timeline-entry">
+              <div class="entry-time">03:30 – 04:00 PM</div>
+              <div>
+                <h4 class="entry-title">Expert Feedback &amp; Closing</h4>
+                <p class="entry-desc">Feedback, key takeaways, participant certificates, and formal closing ceremony.</p>
+              </div>
+              <div><span class="entry-tag tag-awards">CERTIFICATES &amp; CLOSING</span></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         7. EVENT HIGHLIGHTS & RESOURCES
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="highlights" class="highlights-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">4. Resources &amp; Logistics</span>
+          </div>
+          <h2 class="section-title">EVENT HIGHLIGHTS &amp; LOGISTICS</h2>
+          <p class="section-subtitle">
+            Supported with dedicated technical infrastructure and arrangements organized by the chapter.
+          </p>
+        </div>
+
+        <div class="highlights-grid">
+          
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="highlight-title">External Cybersecurity Expert</h3>
+            <p class="highlight-desc">External cybersecurity guest lecturer and industry expert leading sessions, workshops, and evaluating final project demonstrations.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3 class="highlight-title">Participant Certificates</h3>
+            <p class="highlight-desc">Official certificates for participants awarded by ACM-W Student Chapter, SVKM's NMIMS Indore upon successful completion.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <h3 class="highlight-title">Goodies From ACM</h3>
+            <p class="highlight-desc">Exclusive ACM technical goodies and participant materials provided to attendees during the event.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="highlight-title">Refreshments &amp; Lunch</h3>
+            <p class="highlight-desc">Full refreshments and lunch arrangements provided for participants across both days of the event.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="highlight-title">AV Setup for Speaker Session</h3>
+            <p class="highlight-desc">High-definition projector, sound, and AV equipment for live technical demonstrations and slide interactions.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="highlight-title">Technical Support &amp; Volunteers</h3>
+            <p class="highlight-desc">Dedicated technical volunteers and mentors assisting participants throughout the hands-on activity and challenge operations.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         8. VENUE & FACILITY
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="venue" class="venue-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">5. Venue &amp; Schedule Details</span>
+          </div>
+          <h2 class="section-title">VENUE &amp; TIMINGS</h2>
+          <p class="section-subtitle">
+            Hosted at SVKM's NMIMS Deemed-to-be-University, Indore.
+          </p>
+        </div>
+
+        <div class="venue-box">
+          <div class="venue-content-side">
+            <h3 class="venue-name">NMIMS, INDORE</h3>
+            <p class="venue-desc">
+              Auditorium and Multipurpose Hall, SVKM's NMIMS Indore Campus, Off Super Corridor, Bada Bangarda, Indore, Madhya Pradesh.
+            </p>
+
+            <div class="venue-list">
+              <div class="venue-item-row">
+                <div class="venue-icon-circle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="venue-item-title">Daily Timing</div>
+                  <div class="venue-item-val">9:00 AM – 4:00 PM (Both Days)</div>
+                </div>
+              </div>
+
+              <div class="venue-item-row">
+                <div class="venue-icon-circle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="venue-item-title">Venues Within Campus</div>
+                  <div class="venue-item-val">Auditorium (Day 1 Sessions &amp; Demos) &amp; Multipurpose Hall (Day 2 Hands-on Lab)</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a href="https://maps.google.com/?q=NMIMS+Indore" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex;">
+                VIEW CAMPUS ON GOOGLE MAPS
+              </a>
+            </div>
+          </div>
+
+          <div class="venue-radar-side">
+            <div class="radar-graphic">
+              <div class="radar-inner-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+              </div>
+            </div>
+            <div style="font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.08em; color: #ffffff;">
+              INDORE CAMPUS
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyan); margin-top: 0.25rem;">
+              AUDITORIUM &amp; MULTIPURPOSE HALL
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         6. FAQ SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-label-wrap">
+            <span class="section-label-dot"></span>
+            <span class="section-label-text">6. Event Details &amp; Queries</span>
+          </div>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-subtitle">
+            Essential information regarding the two-day CyberForge learning experience.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          
+          <div class="faq-box">
+            <button type="button" class="faq-trigger">
+              <span>What is the core focus of CyberForge?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-inner-text">
+                CyberForge is a two-day cybersecurity learning and hands-on experience designed to move students from theoretical understanding of cybersecurity concepts to applying them in a practical, real-world setting. Day 1 focuses on learning from an invited expert, while Day 2 is dedicated to guided hands-on challenges and demonstrations.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-box">
+            <button type="button" class="faq-trigger">
+              <span>Who is organizing this event?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-inner-text">
+                CyberForge is organized by the ACM-W Student Chapter at SVKM's NMIMS Indore, backed by faculty sponsor Dr. Shruti Sharma, faculty coordinator Dr. Abhay Deep Seth, chapter executive officers, and student members.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-box">
+            <button type="button" class="faq-trigger">
+              <span>What should participants bring to the workshop?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-inner-text">
+                Participants must bring their personal laptop (with Wi-Fi capability and charger) and their NMIMS student identification card. Any specific virtual environments or tools will be shared during Day 1 orientation.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-box">
+            <button type="button" class="faq-trigger">
+              <span>Will certificates and goodies be provided?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-inner-text">
+                Yes! Official participant certificates will be distributed at the closing ceremony on Day 2. Attendees will also receive exclusive goodies from ACM as well as tea, refreshments, and lunch on both event days.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       11. FOOTER
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col-about">
+          <div class="footer-logos">
+            <img src="assets/images/nmims.png" alt="NMIMS" style="height: 32px; width: auto; object-fit: contain;">
+            <img src="assets/images/acmw.png" alt="ACM-W" style="height: 32px; width: auto; object-fit: contain;">
+            <img src="assets/images/acm.png" alt="ACM" style="height: 32px; width: auto; object-fit: contain;">
+          </div>
+          <p class="footer-bio">
+            CYBERFORGE — "Learn the Threat • Build the Defense". A Two-Day Cybersecurity Learning &amp; Hands-on Experience organized by ACM-W Student Chapter, SVKM's NMIMS Indore.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#overview">Event Overview</a></li>
+            <li><a href="#objectives">Core Objectives</a></li>
+            <li><a href="#schedule">Two-Day Schedule</a></li>
+            <li><a href="#highlights">Highlights &amp; Logistics</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Campus Venue</div>
+          <ul class="footer-links-list">
+            <li style="color: #ffffff; font-weight: 600;">SVKM's NMIMS Indore Campus</li>
+            <li>Auditorium &amp; Multipurpose Hall</li>
+            <li>Off Super Corridor, Indore, MP</li>
+            <li>Daily Timing: 9:00 AM – 4:00 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          © 2026 ACM-W Student Chapter, SVKM's NMIMS Indore. All Rights Reserved.
+        </div>
+        <div class="footer-tagline">
+          CYBERFORGE // LEARN THE THREAT • BUILD THE DEFENSE
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Runtime JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
